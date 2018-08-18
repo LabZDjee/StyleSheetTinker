@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./test-stylesheet-tinker.css">
+    <title>t-sheet-tinker</title>
+    <style title="local">
+     .class10 {
+        width: 30%;
+        background-color: lightgreen;
+        padding: 30px;
+        border-radius: 3px;
+     }
+     .class11 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2em;
+        text-align: center;
+     }
+     </style>
+     <style title="otherLocal"></style>
+</head>
+
+<body style="font-family: sans-serif;">
+<div class="class10 class11">Test Stylesheet Tinker</div>
+<h1>Unit Tests</h1>
+<pre id="testResults"></pre>
+<script>
+var elementForResults = document.getElementById("testResults");
+function appendInResults(addition) {
+ var txt = elementForResults.innerHTML;
+ elementForResults.innerHTML = txt + "<br>" + addition;
+}
+</script>
+<script src="./stylesheet-tinker.js"></script>
+<script src="./test-stylesheet-tinker.js"></script>
+</body>
+</html>

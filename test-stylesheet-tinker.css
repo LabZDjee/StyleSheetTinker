@@ -1,0 +1,17 @@
+.class1 {
+    border: 5px solid red;
+    font-size: small;
+    background-color: lightblue;
+    margin: 20px;
+}
+.class1 > div.class11 {
+    border: 10px solid darkgreen;
+    font-size: large;
+    margin: 30px;
+}
+.class2 {
+    border: 10px solid blue;
+    background-color: lightgoldenrodyellow;
+    font-style: italic;
+    margin: 30px;
+}
