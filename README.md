@@ -8,12 +8,12 @@ At construction this **object** references a stylesheet, external (defined by it
 
 ## Constructor
 
-Constructor of the `StyleSheetTinker` **object**: takes a `ref` object as parameter which can contain:
+Constructor of the `StyleSheetTinker` **object**: takes an object as parameter which can contain as properties:
 
-- either `ref.href`: *CSS* file name (with extension, and possibly part of path in case of ambiguity)
-- or `ref.title`: stylesheet title (normally an internal stylesheet, as title for external stylesheets is of very special use)
+- either `href`: *CSS* file name (with extension, and possibly part of path in case of ambiguity)
+- or `title`: stylesheet title (normally an internal stylesheet, as title for external stylesheets is of very special use)
 
-`ref.title` takes precedence over `ref.href`: if both declared, so they cannot be combined in case of external stylesheet with `title` attribute *(to be honest this case of title as a selector for persistent, preferred, and alternate external stylesheets greatly eludes us...)*
+`title` takes precedence over `href`: if both declared, so they cannot be combined in case of external stylesheet with `title` attribute *(to be honest this case of title as a selector for persistent, preferred, and alternate external stylesheets greatly eludes us...)*
 
 ## Methods
 

@@ -56,12 +56,12 @@ var StyleSheetTinker = (function() {
   }
 
   /*
-  * Constructor of the object: takes a 'ref' object as parameter which can contain:
-  *  - either ref.href: CSS file name (with extension, and possibly part of path in case of ambiguity)
-  *  - or ref.title: stylesheet title (normally an internal stylesheet, as title for external
+  * Constructor of the object: takes a 'ref' object as parameter which can contain as properties:
+  *  - either 'href': CSS file name (with extension, and possibly part of path in case of ambiguity)
+  *  - or 'title': stylesheet title (normally an internal stylesheet, as title for external
   *   stylesheets is of very special use)
-  * ref.title takes precedence over ref.href: if both declared, so they cannot be combined in case of external
-  * stylesheet with title (to be honest this case of title as a selector for persistent, preferred, and alternate external stylesheets
+  * 'title' takes precedence over 'href': if both declared, so they cannot be combined in case of external
+  * stylesheet with 'title' (to be honest this case of title as a selector for persistent, preferred, and alternate external stylesheets
   * greatly eludes us...)
   */
   return function(ref) {
@@ -236,7 +236,7 @@ StyleSheetTinker.prototype.getRulesBySelectorHint = function(selectorHint) {
 // newValue: if a string primitive, sets the property to this new value (e.g. "120px")
 //           if not a string, ignored
 // testFunction: if newValue is a string primitive and testFunction is a Function, applies it
-//   with as arguments: the object, the present value, the new value and rule as arguments
+//   with as arguments: the object, the present value, the new value and rule
 //   and only changes property to newValue if this function returns true
 //   this function is called through 'call' so 'this' in the function references the current object
 // return: null in case of failure, otherwise the old value of the property
@@ -277,7 +277,7 @@ StyleSheetTinker.prototype.accessStyleProperty = function(rule, property, newVal
 }
 
 //
-// injects array of 'rules' into style sheet
+// injects array of 'rules' at the end of style sheet
 //
 StyleSheetTinker.prototype.injectRules = function(rules) {
   var index;
