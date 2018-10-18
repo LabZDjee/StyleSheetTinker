@@ -94,7 +94,7 @@ dumping all the stylesheet rules as a string
 - internal stylesheets are identified by their `title` property in this implementation 
 - a stylesheet contains a property named `cssRules` (but formerly it was `rules` on some browsers)
 - this property bears a list of **rules**
-- each rule has a property `selectorText` containing selector as a string (e.g. "`div.aClass p`")
+- each rule has a property `selectorText` containing selector as a string (e.g. "`div.aClass p`"). Note= with IE, Edge this field is read-only
 - each rule also has a property `cssText` containing the entire rule (selector+style) as a string `e.g. ".frame { width: 100%; background: green; }"`
 - it has also a property `style` containing all the information on *CSS* styles as camel cased properties shorthands are not always kept (depends on browser so be careful), they are developed in their components, like font which is developed into font-style, font-weight, font-size, font-height, font-family
 
